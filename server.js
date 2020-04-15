@@ -11,7 +11,7 @@ let fccTestingRoutes = require("./routes/fcctesting.js");
 let runner = require("./test-runner.js");
 
 process.env.DATABASE =
-  "mongodb+srv://dbMahmoud:asdf3456@cluster0-tsysc.mongodb.net/test?retryWrites=true&w=majority";
+  "mongodb+srv://dbMahmoud:asdf3456@cluster0-oh55i.mongodb.net/test?retryWrites=true&w=majority";
 
 let app = express();
 app.use(helmet());
