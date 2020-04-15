@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- Meta Data -->
+    <meta charset="UTF-8" />
+    <meta name="author" content="Mahmoud Mheisen" />
+    <meta name="description" content="FCC Course 6 Project 4" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+
+    <!-- CSS Links -->
+    <link type="text/css" rel="stylesheet" href="/public/style.css" />
+
+    <!-- Title -->
+    <title>Stock Price Checker</title>
+
+    <!-- Icon -->
+    <link
+      id="favicon"
+      rel="icon"
+      href="https://hyperdev.com/favicon-app.ico"
+      type="image/x-icon"
+    />
+
+    <!-- Fonts -->
+    <link
+      href="https://fonts.googleapis.com/css?family=Roboto:400,500,700,900&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
+      integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf"
+      crossorigin="anonymous"
+    />
+  </head>
+
+  <body>
+    <header class="center">
+      <h2>Stock Price Checker</h2>
+      <p>
+        FreeCodeCamp Information Security and Quality Assurance Course, Project
+        4
+      </p>
+    </header>
+
+    <div class="global">
+      <div id="g1" class="api-test">
+        <p id="label" class="center">
+          <strong>API Test </strong>Get single price and total likes
+        </p>
+
+        <form id="testForm2" class="container">
+          <label id="f1"><code> GET /api/stock-prices</code></label>
+          <input id="f2" type="text" name="stock" placeholder="GOOG" required />
+          <label for="like">
+            <input id="f3" type="checkbox" id="like" name="like" />
+            <strong> Likes?</strong>
+          </label>
+          <button id="f7" type="submit">
+            <i class="fa fa-paper-plane"></i> Get Price!
+          </button>
+        </form>
+      </div>
+
+      <div id="g2" class="api-test">
+        <p id="label" class="center">
+          <strong>API Test </strong>Compare and get relative likes
+        </p>
+
+        <form id="testForm" class="container">
+          <label id="f1"><code> GET /api/stock-prices</code></label>
+          <input id="f2" type="text" name="stock" placeholder="GOOG" required />
+          <input id="f3" type="text" name="stock" placeholder="MSFT" required />
+          <label for="like">
+            <input id="f4" type="checkbox" id="like" name="like" />
+            <strong> Like Both?</strong>
+          </label>
+          <button id="f7" type="submit">
+            <i class="fa fa-paper-plane"></i> Get Price!
+          </button>
+        </form>
+      </div>
+
+      <div id="g3" class="api-test-out container">
+        <p id="f1" class="center">
+          <strong>API Test Output </strong>
+        </p>
+        <p id="f2a" class="center">Here is the output</p>
+      </div>
+    </div>
+
+    <div class="center">
+      <h3>Example Usage:</h3>
+      <p><code>GET /api/stock-prices?stock=GOOG</code></p>
+      <p><code>GET /api/stock-prices?stock=GOOG&like=true</code></p>
+      <p><code>GET /api/stock-prices?stock=GOOG&stock=MSFT</code></p>
+      <p><code>GET /api/stock-prices?stock=GOOG&stock=MSFT&like=true</code></p>
+
+      <h3>Example Return:</h3>
+      <code>{"stockData":{"stock":"GOOG","price":"786.90","likes":1}}</code
+      ><br />
+      <code
+        >{"stockData":[{"stock":"MSFT","price":"62.30","rel_likes":-1},{"stock":"GOOG","price":"786.90","rel_likes":1}]}</code
+      >
+      >
+    </div>
+
+    <footer class="center">
+      <strong> &copy; 2020 Mahmoud Mheisen</strong>
+    </footer>
+
+    <script
+      src="https://code.jquery.com/jquery-2.2.1.min.js"
+      integrity="sha256-gvQgAFzTH6trSrAWoH1iPo9Xc96QxSZ3feW6kem+O00="
+      crossorigin="anonymous"
+    ></script>
+    <script src="/public/client.js"></script>
+  </body>
+</html>
