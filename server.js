@@ -18,7 +18,7 @@ app.use(helmet());
 
 // Testing (For FCC testing purposes only):
 app.use(cors({ origin: "*" }));
-// process.env.NODE_ENV = "test";
+process.env.NODE_ENV = "test";
 
 // This project needs to parse POST bodies:
 app.use(bodyParser.json());
